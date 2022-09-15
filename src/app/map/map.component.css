@@ -1,0 +1,154 @@
+#map-mapbox{
+  position: absolute;
+  top: 96px;
+  bottom: 0;
+  /* width: 100%; */
+}
+
+
+h1 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px 2px;
+}
+
+a {
+  color: #404040;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #101010;
+}
+
+/* The page is split between map and sidebar - the sidebar gets 1/3, map
+gets 2/3 of the page. You can adjust this to your personal liking. */
+.sidebar {
+  position: absolute;
+  width: 33.3333%;
+  height: 100%;
+  top: 100px;
+  left: 0;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.map {
+  position: absolute;
+  left: 33.3333%;
+  width: 66.6666%;
+  top: 100px;
+  bottom: 0;
+}
+
+:host ::ng-deep .marker {
+  border: none;
+  cursor: pointer;
+  height: 36px;
+  width: 156px;
+  background-image: url('../../assets/images/intershor-marker.svg');
+}
+
+.heading {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+}
+
+.listings {
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 60px;
+}
+
+:host ::ng-deep .listings .item {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-decoration: none;
+}
+
+:host ::ng-deep .listings .item:last-child { border-bottom: none; }
+
+:host ::ng-deep .listings .item .title {
+  display: block;
+  color: #c9003e;
+  font-weight: 700;
+}
+
+:host ::ng-deep .listings .item .title small { font-weight: 400; }
+
+:host ::ng-deep .listings .item.active .title,
+:host ::ng-deep .listings .item .title:hover { color: #5e211db0; cursor: pointer}
+
+:host ::ng-deep .listings .item.active {
+  background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-left: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00853e;
+  border-radius: 0;
+}
+
+
+/* Marker tweaks */
+:host ::ng-deep .mapboxgl-popup-close-button {
+  display: block;
+}
+
+:host ::ng-deep .mapboxgl-popup-content {
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  width: 440px;
+  height: 240px;
+}
+
+:host ::ng-deep .mapboxgl-popup-content h3 {
+  background: #89917ddb;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+:host ::ng-deep .mapboxgl-popup-content div {
+  margin: 0;
+  padding: 10px 0 0 10px;
+  font-weight: 400;
+}
+
+:host ::ng-deep .mapboxgl-popup-content div {
+  padding: 10px 0 0 10px;
+}
+
+:host ::ng-deep .mapboxgl-popup-anchor-top >  .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+:host ::ng-deep .mapboxgl-popup-anchor-top >  .mapboxgl-popup-tip {
+  border-bottom-color: #91c949;
+}
+
+:host ::ng-deep .mapboxgl-popup {
+  padding-bottom: 50px;
+}
+
+.selected {
+  background-color: #e6e9e9;
+}

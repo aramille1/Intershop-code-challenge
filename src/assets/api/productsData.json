@@ -1,0 +1,20 @@
+ [
+    {
+      "id": 1,
+      "name": "iphone",
+      "price": 800,
+      "description": "A phone everyone love"
+    },
+    {
+      "id": 2,
+      "name": "samsung",
+      "price": 600,
+      "description": "A phone some people love"
+    },
+    {
+      "id": 3,
+      "name": "nokia",
+      "price": 200,
+      "description": "A phone few people love"
+    }
+  ]

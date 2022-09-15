@@ -1,0 +1,17 @@
+<div class='sidebar'>
+  <div class='heading'>
+    <h1>Our locations</h1>
+  </div>
+  <div class="form-group">
+    <input type="email" class="form-control" id="search-text" aria-describedby="search-text"
+      [(ngModel)]="searchText" placeholder="Search by country.."
+      autofocus>
+  </div>
+  <div id='listings' class='listings' >
+      <div class="item" *ngFor="let store of stores | storesFilter: searchText" [ngClass]="{ 'selected': store == selectedStore }">
+        <a class="title" (click)="showOnMap(store)">{{store.name}}</a>
+        <div>{{store.city}}, {{store.country}}</div>
+      </div>
+  </div>
+</div>
+<div class="map" id="map-mapbox"></div>

@@ -1,0 +1,19 @@
+<div class="p-3 mb-2 bg-primary text-white bg-gradient">
+  <div class="row">
+    <div class="col-md-6">
+      <a [routerLink]="[ '/' ]">
+        <h1>Shop</h1>
+      </a>
+    </div>
+    <div class="col-md-6 d-flex justify-content-end">
+      <a class="p-2 button fancy-button text-white text-decoration-none d-flex align-items-center" [routerLink]="[ '/stores' ]">
+        <i class="bi bi-geo-alt px-2" style="color:white;font-size: 2rem;"></i>
+        stores
+      </a>
+      <a class="p-2 button fancy-button text-white text-decoration-none d-flex align-items-center" [routerLink]="[ '/cart' ]">
+        <i class="bi bi-basket px-2" style="color:white;font-size: 2rem;"></i>
+        checkout ({{itemCount()}})
+      </a>
+    </div>
+  </div>
+</div>

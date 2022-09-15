@@ -1,0 +1,14 @@
+<h2>Product Details</h2>
+<div class="card text-center" *ngIf="product">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+    <button class="btn btn-outline-dark" [routerLink]="[ '/']">Back to list</button>
+    <button type="button" class="btn btn-success m-2" (click)="addToCart(product)">
+      Add to basket
+    </button>
+  </div>
+  <div class="card-footer text-muted">
+    {{ product.price | currency }}
+  </div>
+</div>
